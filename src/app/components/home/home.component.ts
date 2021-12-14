@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 import {Observable} from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
@@ -14,18 +14,19 @@ export class HomeComponent implements OnInit {
   sub: any;
   imageList: any;
   randomImages: any;
-  id: any;
+  
 
   
-  constructor(private _dataService: DataService) { }
+  constructor(private _dataService: DataService,private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     
    // images: Image[]{ };
    this.loadData();
    this.getRandom5Images();
-   this.id = setInterval(() => {
-     this.getRandom5Images(); 
+   setInterval(() => {
+     this.getRandom5Images();
+     this.ref.detectChanges(); 
    }, 2000);
   
   }
