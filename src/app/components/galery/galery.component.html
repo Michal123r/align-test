@@ -1,0 +1,12 @@
+
+    <img *ngIf="imagesToShow" class="selected-img" src={{selectedImgBig.download_url}} />
+    
+
+
+<div class="list-images">
+    <button  class="btn triangle-left" (click)="shiftLeft()"></button>
+    <div *ngFor="let img of imagesToShow">
+        <img class="small-img" src={{img.download_url}} (click)="selectedImg(img)"/>
+     </div>
+     <button  class="btn triangle-right"(click)="shiftRigth()"></button>
+</div>
