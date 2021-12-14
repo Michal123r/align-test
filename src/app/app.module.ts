@@ -7,6 +7,7 @@ import { GaleryComponent } from './components/galery/galery.component';
 import { ActiveImageComponent } from './components/active-image/active-image.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BigImageComponent } from './components/big-image/big-image.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BigImageComponent } from './components/big-image/big-image.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

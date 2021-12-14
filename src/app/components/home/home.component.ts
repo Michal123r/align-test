@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   sub: any;
   imageList: any;
   randomImages: any;
+  id: any;
+
   
   constructor(private _dataService: DataService) { }
 
@@ -21,6 +23,11 @@ export class HomeComponent implements OnInit {
     
    // images: Image[]{ };
    this.loadData();
+   this.getRandom5Images();
+   this.id = setInterval(() => {
+     this.getRandom5Images(); 
+   }, 2000);
+  
   }
   loadData() {
     this.isLoading = true;
