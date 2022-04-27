@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './components/board/board.component';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StepsService } from './services/steps.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [StepsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

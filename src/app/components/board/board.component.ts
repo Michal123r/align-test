@@ -19,10 +19,10 @@ export class BoardComponent implements OnInit {
     this.board.reset();
 }
 next(){
-
+this.board.move('d2d4');
 }
 back(){
-  
+
 }
 
 }
