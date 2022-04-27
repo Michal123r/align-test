@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgxChessBoardService } from 'ngx-chess-board';
+import {NgxChessBoardView} from 'ngx-chess-board';
+
 
 @Component({
   selector: 'app-board',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-
-  constructor() { }
+  @ViewChild('board', { static: false })
+  board!: NgxChessBoardView;
+  constructor(private ngxChessBoardService: NgxChessBoardService) { }
 
   ngOnInit(): void {
   }
+  reset() {
+    this.board.reset();
+}
+next(){
+
+}
+back(){
+  
+}
 
 }

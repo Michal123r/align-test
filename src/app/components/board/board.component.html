@@ -1,11 +1,11 @@
 <h1>Michal Roth</h1>
 <div class="content">
     <div class="board">
-       <ngx-chess-board></ngx-chess-board>
+        <ngx-chess-board #board></ngx-chess-board>
     </div>
     
-    <button mat-button color="primary">restart</button>
-    <button mat-button color="primary">next</button>
-    <button mat-button color="primary">back</button>
+    <button mat-button color="primary" (click)="reset()">reset</button>
+    <button mat-button color="primary"(click)="next()">next</button>
+    <button mat-button color="primary" (click)="back()">back</button>
     
 </div>
