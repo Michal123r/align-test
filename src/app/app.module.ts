@@ -7,6 +7,7 @@ import { BoardComponent } from './components/board/board.component';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StepsService } from './services/steps.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StepsService } from './services/steps.service';
     BrowserModule,
     NgxChessBoardModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [StepsService],
   bootstrap: [AppComponent]

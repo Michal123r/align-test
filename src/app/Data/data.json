@@ -1,0 +1,53 @@
+[
+    {  
+        "id":1,
+        "white": "d2d4" ,
+        "black":"g8f6" 
+        
+      },
+      { 
+        "id":2,
+        "white": "c2c4" ,
+        "black":"e7e6" 
+        
+      },
+      {  "id":3,
+        "white": "g1f3" ,
+        "black":"b7b6"  
+        
+      },
+      {  
+        "id":4,
+        "white": "b1c3" ,
+        "black":"f8b4" 
+        
+      },
+      {  
+        "id":5,
+        "white": "c1g5" ,
+        "black":"c8b7" 
+        
+      },
+      {  
+        "id":6,
+        "white": "d2d4" ,
+        "black":"h7h6" 
+        
+      },
+      {  
+        "id":7,
+        "white": "g5h4" ,
+        "black":"b4c3"  
+        
+      },
+      {  
+        "id":8,
+        "white": "h4e6" ,
+        "black":"c3f6" 
+        
+      }
+      
+ 
+
+]
+

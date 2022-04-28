@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StepsService {
-  stepsUrl: string="";
+  
 
   constructor(private http: HttpClient) { }
 
  
  
-  getSteps(): Observable<string[]> {
-    return this.http.get<string[]>(this.stepsUrl)
+  getSteps(){
+    return this.http.get('http://localhost:5000/Chess');
   }
 }
