@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxChessBoardService } from 'ngx-chess-board';
 import {NgxChessBoardView} from 'ngx-chess-board';
 
-
+ // import {StepsService} from 'src/app/services/StepsService';
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -11,9 +11,11 @@ import {NgxChessBoardView} from 'ngx-chess-board';
 export class BoardComponent implements OnInit {
   @ViewChild('board', { static: false })
   board!: NgxChessBoardView;
-  constructor(private ngxChessBoardService: NgxChessBoardService) { }
+  constructor( private ngxChessBoardService: NgxChessBoardService) { }
 
   ngOnInit(): void {
+   // var x=this.stepsService.stepsList;
+   // alert(x);
   }
   reset() {
     this.board.reset();

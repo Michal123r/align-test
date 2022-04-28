@@ -1,3 +1,8 @@
 .board{
     margin: 20px;
 }
+.btn{
+    color:white;
+    margin: 20px;
+    background: rgb(0, 132, 255);
+}
