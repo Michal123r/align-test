@@ -5,8 +5,8 @@
     </div>
     
     <button mat-stroked-button class="btn" (click)="reset()">reset</button>
-    <button mat-stroked-button class="btn"(click)="next()" [disabled]="index>= stepsList.length">next</button>
-    <button mat-stroked-button class="btn" (click)="back()" [disabled]="index <= 0">back</button>
+    <button mat-stroked-button class="btn"(click)="next()" [disabled]="index== stepsList.length-1">next</button>
+    <button mat-stroked-button class="btn" (click)="back()" [disabled]="index < 1">back</button>
    
     
     

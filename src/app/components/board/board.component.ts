@@ -35,8 +35,9 @@ next(){
   const step = this.stepsList[this.index];
   this.board.move(step[0]+step[1]);
    this.index++;
-   if(this.index==this.stepsList.length){
-    var y = this.board.getFEN();
+   if(this.index==this.stepsList.length-1){
+   // var y = this.board.getFEN();
+   alert("win!!!");
    }
  
 }
