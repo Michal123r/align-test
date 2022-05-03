@@ -1,12 +1,12 @@
 <h1>Michal Roth</h1>
 <div class="content">
     <div class="board">
-        <ngx-chess-board #board></ngx-chess-board>
+        <ngx-chess-board #board [showCoords]="false" [dragDisabled]="true" [showLegalMoves]="false"></ngx-chess-board>
     </div>
     
     <button mat-stroked-button class="btn" (click)="reset()">reset</button>
-    <button mat-stroked-button class="btn"(click)="next()">next</button>
-    <button mat-stroked-button class="btn" (click)="back()">back</button>
+    <button mat-stroked-button class="btn"(click)="next()" [disabled]="index>= stepsList.length">next</button>
+    <button mat-stroked-button class="btn" (click)="back()" [disabled]="index <= 0">back</button>
    
     
     

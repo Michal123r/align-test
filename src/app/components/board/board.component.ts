@@ -12,7 +12,8 @@ import { StepsService } from 'src/app/services/steps.service';
 export class BoardComponent implements OnInit {
   @ViewChild('board', { static: false })
   board!: NgxChessBoardView;
-  stepsList: any=[];
+  stepsList: any;
+  index: number =0;
   constructor( private ngxChessBoardService: NgxChessBoardService, private stepsService:StepsService) { }
 
   ngOnInit(): void {
@@ -24,17 +25,24 @@ export class BoardComponent implements OnInit {
       console.log('err', err);
       
     });
-  // this.stepsService.getSteps();
+  
   }
   reset() {
+    this.index =0;
     this.board.reset();
 }
 next(){
-this.board.move('d2d4');
+  const step = this.stepsList[this.index];
+  this.board.move(step[0]+step[1]);
+   this.index++;
+   if(this.index==this.stepsList.length){
+    var y = this.board.getFEN();
+   }
+ 
 }
 back(){
-  
-
+   this.index--;
+   this.board.undo();
 }
 
 }
